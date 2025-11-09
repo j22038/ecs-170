@@ -1,5 +1,9 @@
 import numpy as np
 
+# Function for computing F1_Score
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: F1_Score - F1_Score for each class
 def F1_Score(y_actual, y_predicted):
 
     precision_scores = precision(y_actual, y_predicted)
@@ -15,7 +19,10 @@ def F1_Score(y_actual, y_predicted):
     
     return f1_scores
 
-
+# Function for computing confusion matrix
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: confusion_matrix [4x4] - confusion matrix for each class
 def confusion_matrix(y_actual, y_predicted):
     
     y_actual = np.array(y_actual)
@@ -33,6 +40,10 @@ def confusion_matrix(y_actual, y_predicted):
     return cm
 
 
+# Function for computing precision
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: precision_scores [4]
 def precision(y_actual, y_predicted):
 
     cm = confusion_matrix(y_actual, y_predicted)
@@ -51,6 +62,10 @@ def precision(y_actual, y_predicted):
     return precision_scores
 
 
+# Function for computing recall
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: recall_scores [4]
 def recall(y_actual, y_predicted):
 
     cm = confusion_matrix(y_actual, y_predicted)
@@ -69,6 +84,10 @@ def recall(y_actual, y_predicted):
     return recall_scores
 
 
+# Function for computing accuracy
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: accuracy
 def accuracy(y_actual, y_predicted):
 
     y_actual = np.array(y_actual)
@@ -87,6 +106,10 @@ def accuracy(y_actual, y_predicted):
     return correct / total
 
 
+# Function for computing macro F1
+# Parameters: y_actual - truth labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 label, test image 2 label, test image 3 label, ...]
+#             y_predicted - predicted labels(ex, 0 = Healthy, 1 = Disease 1, 2 = Disease 2, 3 = Disease 3) [test image 1 predicted label, test image 2 predicted label, test image 3 predicted label, ...]
+# Returns: macro_f1 - averaged F1 score across all classes
 def macro_F1(y_actual, y_predicted):
 
     f1_scores = F1_Score(y_actual, y_predicted)
