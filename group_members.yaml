@@ -1,0 +1,41 @@
+group_members:
+  group_member_1:
+    name: Jacob Nguyen
+    student_id: 920615397
+    email: jtpnguyen@ucdavis.edu
+    github_username: j22038
+  group_member_2:
+    name: Rowan Knox
+    student_id: 920646777
+    email: reknox@ucdavis.edu
+    github_username: C28423
+  group_member_3:
+    name: Shangxiao Xie
+    student_id: 920694871
+    email: shaxie@ucdavis.edu
+    github_username: Logic1412
+  group_member_4:
+    name: Richard Lewins
+    student_id: 925720627
+    email: rslewins@ucdavis.edu
+    github_username: Richard-Lewins
+  group_member_5:
+    name: Hyeongseung Nam
+    student_id: 922762882
+    email: hxnnam@ucdavis.edu
+    github_username: GrantNam
+  group_member_6:
+    name: Logan Oscarson
+    student_id: 920704334
+    email: leoscarson@ucdavis.edu
+    github_username: logana199
+  group_member_7:
+    name: Max Kuehnau
+    student_id: 925725936
+    email: mkuehnau@ucdavis.edu
+    github_username: Maxination04
+  group_member_8:
+    name: Dev Rathod
+    student_id: 919920446
+    email: dmrathod@ucdavis.edu
+    github_username: dev-rathod
