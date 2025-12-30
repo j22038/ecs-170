@@ -71,6 +71,8 @@ The final model is a **custom CNN optimized for grayscale images**, focusing on 
 | Training Accuracy | 95.90% |
 | Number of Classes | 10 |
 
+![Validation vs Training Accuracy](assets/training_vs_validation_accuracy.png)
+
 The model achieved **high precision, recall, and F1-scores across all disease categories**, with particularly strong performance in identifying healthy plants.
 
 All figures, plots, and visualizations (including confusion matrices) can be found in `CNN_Program.ipynb`.
@@ -83,6 +85,9 @@ Evaluation metrics included:
 - Accuracy
 - Confusion matrix
 - Precision / Recall / F1-score
+
+### Confusion Matrix
+![Confusion Matrix](assets/confusion_matrix.png)
 
 ### Key Findings
 - Misclassifications often occurred due to **high-contrast lighting**, **cluttered backgrounds**, or **poor image quality**.
